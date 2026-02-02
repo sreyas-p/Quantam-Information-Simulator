@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: aces
+Version: 0.1.0
+Summary: Adaptive Causal-Entropy Simulation for NISQ quantum hardware
+Author: Sreyas Prabu
+Requires-Python: >=3.9
+Requires-Dist: numpy>=1.21
+Requires-Dist: scipy>=1.7
+Requires-Dist: qiskit>=0.45
+Requires-Dist: networkx>=2.6
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Provides-Extra: jax
+Requires-Dist: jax>=0.4; extra == "jax"
+Requires-Dist: jaxlib>=0.4; extra == "jax"
+Dynamic: author
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

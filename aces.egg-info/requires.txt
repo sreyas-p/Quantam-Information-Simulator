@@ -1,0 +1,11 @@
+numpy>=1.21
+scipy>=1.7
+qiskit>=0.45
+networkx>=2.6
+
+[dev]
+pytest>=7.0
+
+[jax]
+jax>=0.4
+jaxlib>=0.4
