@@ -1,40 +1,31 @@
 """
 ACES - Adaptive Causal-Entropy Simulation
 
-A compiled classical emulator for NISQ-era quantum hardware.
-
-Step 1: Core foundational data structures and mathematical definitions.
+A Pauli-based compiled classical emulator for NISQ-era quantum hardware.
 """
 
-from aces.core import (
-    SingleQubitRDM,
-    TwoQubitRDM,
-    CorrelatorStorage,
-    CausalEntanglementGraph,
-    CESEdge,
-    CEGEdge,
-    Gate,
-    GateLibrary,
-    CompileTimeInput,
-    RuntimeInput,
-    RuntimeOutput,
-    MeasurementSpec,
-    NoiseModelSpec,
+# Compiler
+from aces.compiler import CircuitCompiler, CompiledCircuit, CompiledStep, GateOp, parse_circuit
+
+# Runtime
+from aces.runtime import (
+    PauliState,
+    EntanglementTracker,
+    PruningEngine,
+    DepolarizingNoise,
+    DephasingNoise,
 )
 
-__version__ = "0.1.0"
-__all__ = [
-    "SingleQubitRDM",
-    "TwoQubitRDM",
-    "CorrelatorStorage",
-    "CausalEntanglementGraph",
-    "CESEdge",
-    "CEGEdge",
-    "Gate",
-    "GateLibrary",
-    "CompileTimeInput",
-    "RuntimeInput",
-    "RuntimeOutput",
-    "MeasurementSpec",
-    "NoiseModelSpec",
-]
+# Analysis
+from aces.analysis import (
+    compute_bloch_vectors,
+    compute_purity,
+    entanglement_matrix,
+    compression_stats,
+    ACESBenchmark,
+)
+
+# Visualization
+from aces.visualization import print_bloch_vectors, print_entanglement_map
+
+__version__ = "0.3.0"
